@@ -1,0 +1,220 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #141414;
+    color: #fff;
+  }
+  
+  /* Header Styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: rgba(20, 20, 20, 0.8);
+  }
+  
+  header .logo img {
+    width: 120px;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  header nav ul li {
+    margin-right: 20px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  header nav ul li a:hover {
+    color: #b81d24;
+  }
+  
+  header .user-menu img {
+    width: 40px;
+    border-radius: 4px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 80vh;
+    background: url('assets/hero-bg.jpg') center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    text-align: center;
+    z-index: 2;
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .signup-form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .signup-form input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 300px;
+    border: none;
+    border-radius: 2px 0 0 2px;
+  }
+  
+  .signup-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #e50914;
+    border: none;
+    color: #fff;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .signup-form button:hover {
+    background: #f40612;
+  }
+  
+  /* Overlay for darkening the hero section */
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.6);
+    z-index: 1;
+  }
+  
+  /* Movie Sections */
+  .movie-section {
+    padding: 60px 40px;
+    margin-top: 80px; /* account for fixed header */
+  }
+  
+  .movie-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  
+  /* Carousel styling */
+  .movie-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+  }
+  
+  .movie-item {
+    min-width: 200px;
+    margin-right: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease-in forwards;
+    transition: transform 0.3s;
+  }
+  
+  .movie-item img {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  .movie-item:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Animation delays for a staggered effect */
+  .movie-carousel .movie-item:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .movie-carousel .movie-item:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .movie-carousel .movie-item:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  .movie-carousel .movie-item:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 40px;
+    text-align: center;
+    background: #000;
+  }
+  
+  footer .footer-links {
+    margin-bottom: 20px;
+  }
+  
+  footer .footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #757575;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+  
+  footer .footer-links a:hover {
+    color: #fff;
+  }
+  
+  footer p {
+    font-size: 0.8rem;
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
